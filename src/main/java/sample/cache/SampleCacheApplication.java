@@ -28,7 +28,7 @@ public class SampleCacheApplication {
 
 	public static void main(String[] args) {
 		new SpringApplicationBuilder().sources(SampleCacheApplication.class)
-				.profiles("app").run(args);
+				.profiles("appComplex").run(args);
 	}
 
 }
