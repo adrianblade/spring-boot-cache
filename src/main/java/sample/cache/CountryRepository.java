@@ -27,7 +27,18 @@ public class CountryRepository {
 	@Cacheable
 	public Country findByCode(String code) {
 		System.out.println("---> Loading country with code '" + code + "'");
+        simulateSlowService();
 		return new Country(code);
 	}
+
+    // Don't do this at home
+    private void simulateSlowService() {
+        try {
+            long time = 3000L;
+            Thread.sleep(time);
+        } catch (InterruptedException e) {
+            throw new IllegalStateException(e);
+        }
+    }
 
 }
