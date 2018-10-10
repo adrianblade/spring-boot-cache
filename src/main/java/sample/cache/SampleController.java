@@ -14,6 +14,11 @@ public class SampleController {
     public Country geCountry() {
         return complexClient.retrieveCountry();
     }
+
+    @RequestMapping("/overload")
+    public void overload() {
+        complexClient.overload();
+    }
 }
 
 
