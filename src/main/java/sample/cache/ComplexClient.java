@@ -25,12 +25,11 @@ import org.springframework.stereotype.Component;
 import java.util.*;
 
 @Component
-@Profile("appComplex")
 class ComplexClient {
 
 	Logger logger = LoggerFactory.getLogger(ComplexClient.class);
 
-	private static final int LIST_SIZE = 300;
+	private static final int LIST_SIZE = 1000000;
 
 	private static List<String> sample_country_code = new ArrayList<>();
 
@@ -43,22 +42,22 @@ class ComplexClient {
 		this.random = new Random();
 	}
 
-	@Scheduled(fixedDelay = 500)
-	public void retrieveCountry() {
+	public Country retrieveCountry() {
 		if (sample_country_code.size() <= LIST_SIZE) {
 			sample_country_code.add(UUID.randomUUID().toString());
 		}
 		String randomCode = sample_country_code.get(this.random.nextInt(sample_country_code.size()));
 		long tm = System.nanoTime();
-		this.countryService.findByCode(randomCode);
+		Country country = this.countryService.findByCode(randomCode);
 		tm = System.nanoTime() - tm;
 		// Get elapsed time in seconds
 		// Get elapsed time in seconds
 		if (tm > 2000000000) {
-			logger.info("BBDD(): "+randomCode+ " " + tm + " ns " + "Data count: " + sample_country_code.size());
+			//logger.info("BBDD(): "+randomCode+ " " + tm + " ns " + "Data count: " + sample_country_code.size());
 		} else {
 			logger.info("CACHED: "+randomCode+ " " + tm + " ns " + "Data count: " + sample_country_code.size());
 		}
+		return country;
 	}
 
 }

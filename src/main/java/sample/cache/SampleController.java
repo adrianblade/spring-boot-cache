@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class SampleController {
 
     @Autowired
-    CountryRepository countryRepository;
+    ComplexClient complexClient;
 
     @RequestMapping("/country")
     public Country geCountry() {
-        return countryRepository.findByCode("33");
+        return complexClient.retrieveCountry();
     }
 }
 
