@@ -60,8 +60,38 @@ class ComplexClient {
 		return country;
 	}
 	
-	public void overload() {
+	public void overload500() {
 		for (int i = 0; i < 500; i++) {
+			sample_country_code.add(UUID.randomUUID().toString());
+		}
+	}
+
+	public void overload1000() {
+		for (int i = 0; i < 1000; i++) {
+			sample_country_code.add(UUID.randomUUID().toString());
+		}
+	}
+
+	public void overload2500() {
+		for (int i = 0; i < 2500; i++) {
+			sample_country_code.add(UUID.randomUUID().toString());
+		}
+	}
+
+	public void overload5000() {
+		for (int i = 0; i < 5000; i++) {
+			sample_country_code.add(UUID.randomUUID().toString());
+		}
+	}
+
+	public void overload10000() {
+		for (int i = 0; i < 10000; i++) {
+			sample_country_code.add(UUID.randomUUID().toString());
+		}
+	}
+
+	public void overload50000() {
+		for (int i = 0; i < 50000; i++) {
 			sample_country_code.add(UUID.randomUUID().toString());
 		}
 	}

@@ -2,37 +2,77 @@
 
 | Elements on memory        | time       |
 | ------------- |:-------------:|
-| 1       | 1122118 ns |
-| 10      |  599478 ns |
-| 50      |  556443 ns |
-| 100     |  429817 ns    |
-| 500     |  429817 ns    |
-| 1000    |  302991 ns    |
-| 2500    |  211586 ns    |
-| 5000    |  145532 ns    |
-| 10000   | are neat      |
-| 50000   | are neat      |
-| 100000  | are neat      |
-| 500000  | are neat      |
+| 1       |1.122.118 ns  |
+| 10      |  599.478 ns |
+| 50      |  556.443 ns |
+| 100     |  408.186 ns |
+| 500     |  429.817 ns |
+| 1000    |  302.991 ns |
+| 2500    |  211.586 ns |
+| 5000    |  298.934 ns |
+| 10000   |  342.789 ns |
+| 50000   |  312.839 ns |
 
-2500
-====
-processors=4 
-physical.memory.total=15,6G, 
-physical.memory.free=2,4G,
-swap.space.total=11,9G,
-swap.space.free=11,9G,
-heap.memory.used=163,0M,
-heap.memory.free=468,0M,
-heap.memory.total=631,0M,
-heap.memory.max=3,5G,
-heap.memory.used/total=25,83%,
-heap.memory.used/max=4,61%,
-minor.gc.count=12,
-minor.gc.time=256ms,
-major.gc.count=3,
-major.gc.time=534ms,
-load.systemAverage=4,11,
-thread.count=55,
-thread.peakCount=59,
-operations.completed.count=7716
+## Redis
+
+| Elements on memory        | time       |
+| ------------- |:-------------:|
+| 1       | 1.692.118 ns|
+| 10      |  609.123 ns |
+| 50      |  566.479 ns |
+| 100     |  498.450 ns |
+| 500     |  439.148 ns |
+| 1000    |  312.359 ns |
+| 2500    |  281.124 ns |
+| 5000    |  318.105 ns |
+| 10000   |  392.934 ns |
+| 50000   |  352.258 ns |
+
+
+## ehCache 2
+
+| Elements on memory        | time       |
+| ------------- |:-------------:|
+| 1       |  845.090 ns    |
+| 10      |  136.636 ns    |
+| 50      |  162.648 ns    |
+| 100     |  126.415 ns    |
+| 500     |   85.787 ns    |
+| 1000    |   85.971 ns    |
+| 2500    |   46.260 ns    |
+| 5000    |   52.919 ns    |
+| 10000   |   76.829 ns    |
+| 50000   |   43.761 ns    |
+
+
+
+## ehCache 3
+
+| Elements on memory        | time       |
+| ------------- |:-------------:|
+| 1       | 1.337.915 ns    |
+| 10      |  194.247 ns    |
+| 50      |  159.298 ns    |
+| 100     |  152.855 ns    |
+| 500     |  182.555 ns    |
+| 1000    |  143.799 ns    |
+| 2500    |  112.860 ns    |
+| 5000    |   98.216 ns    |
+| 10000   |   77.629 ns    |
+| 50000   |   42.515 ns    |
+
+## Caffeine
+
+| Elements on memory        | time       |
+| ------------- |:-------------:|
+| 1       | 3.563.455 ns   |
+| 10      |  126.290 ns    |
+| 50      |  117.677 ns    |
+| 100     |   91.263 ns    |
+| 500     |   82.813 ns    |
+| 1000    |   45.574 ns    |
+| 2500    |   84.385 ns    |
+| 5000    |   56.868 ns    |
+
+
+Not support clustering
